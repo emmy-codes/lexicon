@@ -1050,6 +1050,39 @@ video {
   border-right-width: 1px;
 }
 
+.bg-shamrock-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 135 87 / var(--tw-bg-opacity));
+}
+
+.bg-shamrock-600\/10 {
+  background-color: rgb(20 135 87 / 0.1);
+}
+
+.bg-shamrock-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 167 109 / var(--tw-bg-opacity));
+}
+
+.bg-shamrock-500\/10 {
+  background-color: rgb(34 167 109 / 0.1);
+}
+
+.bg-shamrock-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 86 59 / var(--tw-bg-opacity));
+}
+
+.bg-shamrock-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(175 235 201 / var(--tw-bg-opacity));
+}
+
+.bg-shamrock-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 251 244 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1175,6 +1208,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1278,6 +1316,31 @@ video {
   letter-spacing: -0.025em;
 }
 
+.text-shamrock-600 {
+  --tw-text-opacity: 1;
+  color: rgb(20 135 87 / var(--tw-text-opacity));
+}
+
+.text-shamrock-800 {
+  --tw-text-opacity: 1;
+  color: rgb(15 86 59 / var(--tw-text-opacity));
+}
+
+.text-shamrock-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 196 139 / var(--tw-text-opacity));
+}
+
+.text-shamrock-700 {
+  --tw-text-opacity: 1;
+  color: rgb(16 108 73 / var(--tw-text-opacity));
+}
+
+.text-shamrock-900 {
+  --tw-text-opacity: 1;
+  color: rgb(14 70 49 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -1330,6 +1393,11 @@ video {
   --tw-ring-inset: inset;
 }
 
+.ring-shamrock-200 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(175 235 201 / var(--tw-ring-opacity));
+}
+
 .blur-3xl {
   --tw-blur: blur(64px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1371,6 +1439,41 @@ video {
   transition-timing-function: linear;
 }
 
+.hover\:bg-shamrock-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 167 109 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-shamrock-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 86 59 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-shamrock-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 218 170 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-shamrock-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(175 235 201 / var(--tw-bg-opacity));
+}
+
+.hover\:text-shamrock-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(20 135 87 / var(--tw-text-opacity));
+}
+
+.hover\:text-shamrock-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(15 86 59 / var(--tw-text-opacity));
+}
+
+.hover\:ring-shamrock-300:hover {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(123 218 170 / var(--tw-ring-opacity));
+}
+
 .focus-visible\:outline:focus-visible {
   outline-style: solid;
 }
@@ -1381,6 +1484,35 @@ video {
 
 .focus-visible\:outline-offset-2:focus-visible {
   outline-offset: 2px;
+}
+
+.focus-visible\:outline-shamrock-600:focus-visible {
+  outline-color: #148757;
+}
+
+.group:hover .group-hover\:bg-shamrock-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 86 59 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-shamrock-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 218 170 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-shamrock-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(175 235 201 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:text-shamrock-600 {
+  --tw-text-opacity: 1;
+  color: rgb(20 135 87 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-shamrock-800 {
+  --tw-text-opacity: 1;
+  color: rgb(15 86 59 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1492,6 +1624,16 @@ video {
   .sm\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .sm\:pb-24 {
