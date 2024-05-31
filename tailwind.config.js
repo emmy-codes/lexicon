@@ -30,6 +30,7 @@ module.exports = {
         '900': '#783816',
         '950': '#411a09',
       },
+      'white': '#ffffff'
     }
   },
   plugins: [],
