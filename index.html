@@ -2,409 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/output.css" />
-  <title>Admissions Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Get Coding!</title>
 </head>
 
 <body>
-  <!-- Static sidebar for desktop -->
-  <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:z-50 lg:w-72 lg:flex-col">
-    <!-- Sidebar component, swap this element with another sidebar if you like -->
-    <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
-      <nav class="flex flex-1 flex-col">
-        <ul role="list" class="flex flex-1 flex-col gap-y-7">
-          <li>
-            <ul role="list" class="-mx-2 space-y-1">
-              <li>
-                <!-- Current: "bg-gray-50 text-shamrock-600", Default: "text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50" -->
-                <a href="#home"
-                  class="font-bold hover:bg-shamrock-200 text-shamrock-600 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-                  <svg class="h-6 w-6 shrink-0 text-shamrock-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                  </svg>
-                  Home
+    <main class="main-wrapper">
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <a href="#">
+                    <li>Learn to code</li>
                 </a>
-              </li>
-              <li>
-                <a href="#personal-letter"
-                  class="text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-                  <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                  </svg>
-                  Personal letter
+                <a href="#">
+                    <li>About</li>
                 </a>
-              </li>
-              <li>
-                <a href="#experience"
-                  class="text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-                  <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
-                  </svg>
-                  Previous experience
+                <a href="#">
+                    <li>Contact us</li>
                 </a>
-              </li>
-              <li>
-                <a href="#requested-info"
-                  class="text-shamrock-700 font-bold hover:bg-shamrock-200 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-                  <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
-                  </svg>
-                  Requested information
-                </a>
-              </li>
-              <li>
-                <a href="#example"
-                  class="text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-                  <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                  </svg>
-                  Some of my work
-                </a>
-              </li>
             </ul>
-          </li>
+        </nav>
+    </header>
+
+    <section class="top-half-div">
+        <img src="https://s3-alpha-sig.figma.com/img/cdcd/0f24/5d2b1eb8536ee905aa5e262da25b4414?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SEgvDQFwWHewZ1H75HChsofx9LLcdXw-kgPljJL6gm9SHilTKB21MM4mYSIDXM1BQ1tTZXcr5AMLFDxWZ02B1Wk9tOkFYRBvx8~zyfUKZvcQxvmYQZsPBM2exnE6d-CUlLbu9LFYaHuUUWpglkom8zbbvmPLAO3BLsGfqYCn5GfGLbP8WCdkxBZCuFsmt1kcSpAja5SM73ebVaXN8VQnGMXnfLUX-ZQYnpv2GFrEfuwFIRlojYGgfHahJ-2ai7jGYz12RRfPcaOOl2eFHzgurk6oH4RJYO5yLwoCKcRl9czshC6xEyi79tChFHFtBM7--MLh3s3ZyNR~nOH2uI~TUQ__"
+            alt="Two books about starting learning to code using HTML, CSS and JavaScript. A coffee mug is to the side of the books.">
+    </section>
+    <section class="bottom-half-div">
+        <h2>Do you want to learn how to make a website?</h2>
+        <button class="read-more-btn">Read more</button>
+    </section>
+    </main>
+    <footer>
+        <ul class="footer-links">
+            <li>About us</li>
+            <li>The company</li>
+            <li>Our values</li>
         </ul>
-      </nav>
-    </div>
-  </div>
-
-
-  <div class="bg-white shadow lg:hidden">
-    <div class="mx-auto max-w-7xl px-2 px-6 lg:px-8">
-      <div class="relative flex h-16 justify-between">
-        <ul role="list" class="flex flex-row items-stretch justify-start">
-          <li>
-            <!-- Current: "bg-gray-50 text-shamrock-600", Default: "text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50" -->
-            <a href="#home"
-              class="font-bold hover:bg-shamrock-200 text-shamrock-600 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-              <svg class="h-6 w-6 shrink-0 text-shamrock-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-              </svg>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#personal-letter"
-              class="text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-              <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-              </svg>
-              Personal letter
-            </a>
-          </li>
-          <li>
-            <a href="#experience"
-              class="text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-              <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
-              </svg>
-              Previous experience
-            </a>
-          </li>
-          <li>
-            <a href="#requested-info"
-              class="text-shamrock-700 font-bold hover:bg-shamrock-200 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-              <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
-              </svg>
-              Requested information
-            </a>
-          </li>
-          <li>
-            <a href="#example"
-              class="text-shamrock-700 font-bold hover:bg-shamrock-200 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6">
-              <svg class="h-6 w-6 shrink-0 text-shamrock-900 group-hover:bg-shamrock-200" fill="none"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-              </svg>
-              Some of my work
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-
-  <main class="lg:pl-72">
-    <div>
-      <!-- Main area -->
-      <!-- Hero section -->
-      <div id="home" class="relative">
-        <div class="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden sm:-top-80" aria-hidden="true">
-        </div>
-        <div>
-          <div class="mx-auto max-w-7xl">
-            <div class="mx-auto text-center">
-              <h1 class="m-4 text-4xl font-bold tracking-tight text-shamrock-900 sm:text-6xl">
-                Admissions Assignment
-              </h1>
-              <p class="italic mt-2 text-lg leading-8 text-shamrock-600">
-                By Emma Scott-Allen
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="py-16 sm:py-24">
-          <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div
-              class="relative overflow-hidden bg-gray-900 px-6 py-16 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
-              <!-- BG image -50% saturation and +50% brightness -->
-              <img class="absolute inset-0 h-full w-full object-cover brightness-200 saturate-50"
-                src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="">
-              <!-- dark green 90% opacity overlay -->
-              <div class="absolute inset-0 bg-shamrock-950/90 mix-blend-multiply"></div>
-
-              <!-- Text -->
-              <div class="relative mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">
-                <p class="text-shamrock-50">Hi and welcome to my admissions page for the backend developer course! I'm
-                  looking forward to introducint some of my projects and showing why I would be a good fit for the
-                  course! This
-                  page was made using Tailwind CSS and 2 Tailwind Components, which were customized to suit my needs.
-                  <br>Happy reading, looking forward to speaking soon!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Feature section -->
-      <div id="personal-letter" class="mx-auto mt-16 max-w-7xl px-6 py-6 bg-hot-cinnamon-100">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="mt-2 text-3xl font-bold tracking-tight text-shamrock-900 sm:text-4xl">
-            Personal letter
-          </h2>
-        </div>
-        <div class="mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-16 lg:max-w-4xl">
-          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            <div class="relative pl-16">
-              <dt class="text-base leading-7 text-shamrock-900 font-bold">
-                <div
-                  class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-shamrock-500">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                  </svg>
-                </div>
-                Passionate about coding
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-shamrock-600">
-                I've been interested in coding since around 2015, and I took my first intro course to the world of
-                programming
-                (Programmering 1). Since then I've been wanting to get into software development, and have gone through
-                a 2 year degree
-                (YH utbildning) within frontend, followed by an online bootcamp to refresh and improve my skills after
-                taking parental
-                leave (Code Institute)
-              </dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base leading-7 text-shamrock-900 font-bold">
-                <div
-                  class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-shamrock-500">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                  </svg>
-                </div>
-                Interested in backend
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-shamrock-600">
-                I feel like I want to turn more towards backend development, and have tried some backend using
-                Django/Python at Code
-                Institute, but I feel I am most comfortable in a JS environment.
-                I have not tried Node in any way, but I am somewhat familiar with REST APIs.
-              </dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base leading-7 text-shamrock-900 font-bold">
-                <div
-                  class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-shamrock-500">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                  </svg>
-                </div>
-                Problem solver
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-shamrock-600">
-                I've come to understand the high value of problem-solving in software development, and that unlocking
-                that skill is
-                going to be one of the best things I can learn. Behind that it's just syntax, my motto is: solve the
-                problem, not the code!
-              </dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base leading-7 text-shamrock-900 font-bold">
-                <div
-                  class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-shamrock-500">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                  </svg>
-                </div>
-                Boost my odds
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-shamrock-600">
-                I'm aware of how the IT market looks right now, and already have experienced the challenges with
-                applying for junior software development positions. I belive I will be lucky to get hired into a
-                frontend role due to the over-saturation of the junior dev market caused by bootcamps. I think turning
-                my studies towards backend will help me to land a job much easier!
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-
-      <!-- Previous experience section -->
-      <div id="experience" class="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
-        <div class="relative overflow-hidden px-6 py-10 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
-          <img class="absolute inset-0 h-full w-full object-cover brightness-250 saturate-0.5 opacity-60 "
-            src="https://images.pexels.com/photos/23886064/pexels-photo-23886064/free-photo-of-above-the-dirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="" />
-          <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply"></div>
-          <div class="absolute -left-80 -top-56 transform-gpu blur-3xl" aria-hidden="true">
-
-          </div>
-          <div class="relative mx-auto max-w-2xl lg:mx-0">
-            <div class="mx-auto max-w-2xl text-center">
-              <h2 class="text-3xl font-bold tracking-tight text-hot-cinnamon-900 sm:text-4xl">
-                Previous experience
-              </h2>
-              <div class="mx-auto mt-6 max-w-xl text-lg leading-8 text-shamrock-900">
-                <ul class="list-disc font-bold">
-                  <li>May 2023 - June 2024: Studied Fullstack development with React/JS frontend and Python/Django
-                    backend</li>
-                  <li>August 2020 - Feb 2022: Studied Frontend development at Hyper Island YH in Stockholm</li>
-                  <li>December 2015: Studied Programmering 1 using Java (5weeks)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Requested info section -->
-        <div id="requested-info"
-          class="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-4 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32">
-          <h2 class="text-2xl font-bold leading-10 tracking-tight text-hot-cinnamon-900">
-            Requested information
-          </h2>
-          <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
-            <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-              <dt class="text-base leading-7 text-shamrock-900 lg:col-span-5 font-bold">Why do you want to study backend
-                with us?</dt>
-              <dd class="mt-4 lg:col-span-7 lg:mt-0">
-                <p class="text-base leading-7 text-hot-cinnamon-800">
-                  I'm here to propell my learning: I've studied frontend, and some backend using Python/Django but I'm
-                  curious to try out backend using NodeJS. My view of the market right now is fullstack either requires
-                  Java in backend and React on frontend, or NodeJS and ReactJS together. I'm hoping studying backend
-                  within JS will increase my job chances!
-                </p>
-              </dd>
-              <dt class="text-base leading-7 text-shamrock-900 lg:col-span-5 font-bold">
-                What makes you a great fit for this course?
-              </dt>
-              <dd class="mt-4 lg:col-span-7 lg:mt-0">
-                <p class="text-base leading-7 text-hot-cinnamon-800">
-                  I have had a long-standing interest in software development, as the first course I tried was 9 years
-                  ago
-                  already! The studies came more recently, but I've been studying to get into an engineering role in the
-                  future. It's a hard subject matter to learn to be sure, and I know I have to have an edge when
-                  applying
-                  for roles. <br> I get an intense joy from seeing code and playing with it, I've known for a long time
-                  that I wanted to work in the field and feel I need one final push to fill up my knowledge cup to the
-                  brim so that I can make the jump into engineering!
-                </p>
-              </dd>
-
-            </div>
-
-          </dl>
-        </div>
-
-        <!-- Example section -->
-        <div id="example" class="relative px-6 lg:px-8 bg-hot-cinnamon-100 mx-auto mt-16 py-6">
-          <div class="mx-auto max-w-2xl text-justify">
-            <h2 class="text-center text-3xl font-bold tracking-tight text-shamrock-900 sm:text-4xl mb-2">
-              Example of my work:
-            </h2>
-            <h3 class="text-xl font-bold text-center">Star Wars Quiz</h3>
-            <div class="mx-auto mt-2 flex flex-col items-center max-w-xl text-lg leading-8 text-hot-cinnamon-800">
-              <a href="https://github.com/emmy-codes/Star-Wars-Quiz" target="_blank"
-                class=" text-shamrock-600 underline hover:bg-shamrock-200">GitHub Repo Link</a>
-              <p class="self-start">I chose this project for several reasons:</p>
-              <ol class="m-4 self-start list-disc w-1/2 mb-4">
-                <li>Its extremely thorough readme</li>
-                <li>Simple but effective</li>
-                <li>Great responsiveness</li>
-              </ol>
-              <p>
-                I planned this project out to practice JavaScript specifically. A lot of detail went into the ReadMe so
-                that it could function as a sort of road map of things to do once I started coding.
-                From wireframes to colour palettes and some User Stories to follow, along with deployment and forking
-                guidelines, it had everything.
-              </p>
-              <br>
-              <p>
-                The quiz was set up with an array of questions and answers with an attribute telling if the answer was
-                the correct one or not.
-                I tracked the user's score in the variable currentScore which incremented by 1 if the user clicked on
-                the button which was associated with the correct answer.
-                I had used 3 event listeners: for showing and closing the quiz info (which opened/closed a modal box)
-                and the all important one which started the quiz off.
-              </p>
-              <br>
-              <p>
-                The main showQuizQuestions function tracked both the user's current score and the index number of the
-                quiz they were on.
-                The current question object stored that index and would increment any time one of the answers was
-                clicked, thus tracking the progress. I had to ensure the event was only fired when clicking
-                on the buttons and not the wrapper div which I solved by ensuring the className on the clicked element
-                was "buttons".
-                Upon reaching the end of the quiz, the currentQuestionObject (that was tracking the question number)
-                returns as undefined, so I used that to reset the quizIndex and currentScore variables.
-              </p>
-
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-  </main>
+    </footer>
 </body>
 
 </html>
