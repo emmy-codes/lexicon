@@ -41,6 +41,7 @@ video {
     display: flex;
     gap: 15em;
     background-color: pink;
+    color: #F8F8F8;
     width: 80vw;
     text-decoration: none;
 }
@@ -70,4 +71,14 @@ img {
 
 footer {
     height: 10vh;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    list-style-type: none;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    padding-top: 1rem;
 }
