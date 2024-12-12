@@ -1,0 +1,261 @@
+/* CSS resets */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Japan flag */
+
+.container-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    height: 300px;
+    width: 500px;
+}
+
+.circle {
+    background-color: #BD1918;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 50%;
+}
+
+/* Menu Easy */
+
+.nav-easy {
+    display: flex;
+    background-color: #d2d0d0;
+    width: 60vw;
+    height: 6vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-items {
+    color: rgb(74, 72, 72);
+    height: 100%;
+    /* flex-grow: 1; */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+}
+
+.nav-items:hover {
+    color: #d2d0d0;
+    background-color: rgb(74, 72, 72);
+}
+
+/* Menu Medium */
+
+.svg-logo {
+    width: 10vw;
+    padding-left: 1em;
+}
+
+.nav-medium {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d2d0d0;
+    width: 60vw;
+    height: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+.nav-items-medium {
+    color: rgb(74, 72, 72);
+    height: 100%;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+    margin: 1rem;
+}
+
+/* Menu Hard */
+
+.nav-items-hard {
+    align-content: center;
+}
+
+.login {
+    background-color: #d2d0d0;
+    height: 60%;
+    border: solid 1px rgb(74, 72, 72);
+    border-radius: 4px;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+/* Fibonacci Flexbox */
+
+body {
+    display: block;
+    align-content: center;
+}
+
+.fibonacci-wrapper {
+    display: flex;
+    max-width: 80vw;
+    height: 5vh;
+    margin: auto;
+    color: rgb(238, 237, 222);
+    font-size: small;
+}
+
+.fibonacci-nr-ascending {
+    flex-basis: 0;
+}
+
+.fibonacci-nr-ascending:nth-child(1) {
+    background-color: #640000;
+    flex-grow: 0;
+}
+
+.fibonacci-nr-ascending:nth-child(2) {
+    background-color: #641400;
+    flex-grow: 1;
+}
+
+.fibonacci-nr-ascending:nth-child(3) {
+    background-color: #642800;
+    flex-grow: 1;
+}
+
+.fibonacci-nr-ascending:nth-child(4) {
+    background-color: #643C00;
+    flex-grow: 2;
+}
+
+.fibonacci-nr-ascending:nth-child(5) {
+    background-color: #645000;
+    flex-grow: 3;
+}
+
+.fibonacci-nr-ascending:nth-child(6) {
+    background-color: #646400;
+    flex-grow: 5;
+}
+
+.fibonacci-nr-ascending:nth-child(7) {
+    background-color: #647800;
+    flex-grow: 8;
+}
+
+.fibonacci-nr-ascending:nth-child(8) {
+    background-color: #648C00;
+    flex-grow: 13;
+}
+
+.fibonacci-nr-ascending:nth-child(9) {
+    background-color: #64A000;
+    flex-grow: 21;
+}
+
+.fibonacci-nr-ascending:nth-child(10) {
+    background-color: #64B301;
+    flex-grow: 34;
+}
+
+/* Card */
+
+.card {
+    background-color: white;
+    width: 25vw;
+    height: 45vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+}
+
+.quote-text {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.author {
+    font-style: normal;
+    color: #707070;
+    padding-top: 0.5rem;
+    text-align: center;
+}
