@@ -1,6 +1,19 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: black;
+    color:#ccc;
+}
+
+h1 {
+    margin: 0;
+    padding: 5em;
+    color: black;
+    text-align: center;
+}
+
+.banner {
+    background-color: #3DE07E;
 }
 
 .container {
@@ -11,9 +24,16 @@ body {
 
 .poster {
     margin: 10px;
+    /* bonus border because nice */
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    width: 30%;
+}
+
+.take-my-money {
+    background-color: #E83F57;
+    border-radius: 4px;
 }
 
 .poster img {
