@@ -2,14 +2,15 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-color: black;
-    color:#ccc;
+    color: #ccc;
 }
 
 h1 {
     margin: 0;
-    padding: 5em;
+    padding: 2em 0 3em;
     color: black;
     text-align: center;
+    font-size: 50px;
 }
 
 .banner {
@@ -19,7 +20,7 @@ h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .poster {
@@ -28,11 +29,25 @@ h1 {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    width: 30%;
+    width: 25%;
+    /* flex-grow: 1; */
+}
+
+/* my mistake: over-engineering. NEEDS FLEXBOX! ... oh no i just need the ONE thing below:
+.text-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+
+.text-content-wrapper {
+    text-align: start;
 }
 
 .take-my-money {
     background-color: #E83F57;
+    color: white;
+    padding: 0.4em;
     border-radius: 4px;
 }
 
@@ -40,3 +55,14 @@ h1 {
     max-width: 100%;
     height: auto;
 }
+
+.last-posters {
+    color: black;
+    background-color: white;
+}
+
+.last-two {
+    display: flex;
+    justify-content: center;
+}
+
