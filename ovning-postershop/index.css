@@ -17,20 +17,17 @@ h1 {
     background-color: #3DE07E;
 }
 
-.container {
+.hero-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 }
 
-.poster {
-    margin: 10px;
-    /* bonus border because nice */
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    width: 25%;
-    /* flex-grow: 1; */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    margin: 1em;
 }
 
 /* my mistake: over-engineering. NEEDS FLEXBOX! ... oh no i just need the ONE thing below:
@@ -42,6 +39,10 @@ h1 {
 
 .text-content-wrapper {
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .take-my-money {
@@ -49,6 +50,13 @@ h1 {
     color: white;
     padding: 0.4em;
     border-radius: 4px;
+    width: fit-content;
+}
+
+.poster {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .poster img {
@@ -61,8 +69,57 @@ h1 {
     background-color: white;
 }
 
+/* for sizing the last-two container differently */
 .last-two {
     display: flex;
     justify-content: center;
+    /* match the margin and gap for the items so they are always evenly spaced */
+    margin: 2em 1em;
+    gap: 1em;
 }
 
+.last-two .text-content-wrapper {
+    margin: 0 0 1em 1em;
+}
+
+.last-two .take-my-money {
+    margin: 0 0 1em 1em;
+}
+
+.last-two .poster {
+    width: 50%;
+    background-color: white;
+    color: black;
+}
+
+footer {
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0 0;
+    padding: 1.5em 1em 3em;
+}
+
+footer h3 {
+    margin-top: 0;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+footer address p {
+    font-size: 0.75em;
+    max-width: 70%;
+}
