@@ -4,82 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout-style.css">
     <title>Poster Shop Checkout</title>
 </head>
 
 <body>
     <header>
         <h1>Checkout</h1>
-        <img src="ninja_header.png" alt="Ninja" width="50">
+        <img src="../images/ninja.png" alt="Ninja" width="50">
     </header>
 
-    <div class="container">
-        <h2>Items in your basket</h2>
-        <div class="cart-items">
-            <div class="cart-item">
-                <img src="../images/photographer.png" alt="Photographer">
-                <h3>Photographer</h3>
+    <main>
+        <div class="container">
+            <h2>Items in your basket</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="../images/photographer.png" alt="Photographer">
+                    <h3>Photographer</h3>
+                </div>
+                <div class="cart-item">
+                    <img src="../images/personal_trainer.png" alt="Personal Trainer">
+                    <h3>Personal trainer</h3>
+                </div>
             </div>
-            <div class="cart-item">
-                <img src="../images/personal_trainer.png" alt="Personal Trainer">
-                <h3>Personal trainer</h3>
+            <div class="summary">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Amount</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Poster Photographer</td>
+                            <td>1</td>
+                            <td>179 sek</td>
+                        </tr>
+                        <tr>
+                            <td>Poster Crossfit</td>
+                            <td>1</td>
+                            <td>179 sek</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td>358 sek</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button class="gimme-button">Gimmie gimmie gimmie!</button>
             </div>
         </div>
-
-        <div class="summary">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Amount</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Poster Photographer</td>
-                        <td>1</td>
-                        <td>179 sek</td>
-                    </tr>
-                    <tr>
-                        <td>Poster Crossfit</td>
-                        <td>1</td>
-                        <td>179 sek</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Total</td>
-                        <td>358 sek</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <button class="gimme-button">Gimmie gimmie gimmie!</button>
-        </div>
-    </div>
-
-    <footer>
-        <nav>
-            <h2>Nav</h2>
-            <a href="#">Products</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </nav>
-
-        <address>
-            <h2>Address information</h2>
-            <p>Plinkeplonkvägen 32
-                888 81 Klonkberga</p>
-        </address>
-
-        <div class="social-media">
-            <h2>Social media</h2>
-            <a href="#"><i class="twitter"></i>TW</a>
-            <a href="#"><i class="facebook"></i>FB</a>
-            <a href="#"><i class="twitter"></i>LI</a>
-            <a href="#"><i class="instagram"></i>IG</a>
-        </div>
-    </footer>
+        <footer>
+            <nav>
+                <h2>Nav</h2>
+                <a href="#">Products</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+            <address>
+                <h2>Address information</h2>
+                <p>Plinkeplonkvägen 32
+                    888 81 Klonkberga</p>
+            </address>
+            <div class="social-media">
+                <h2>Social media</h2>
+                <a href="#"><i class="twitter"></i>TW</a>
+                <a href="#"><i class="facebook"></i>FB</a>
+                <a href="#"><i class="twitter"></i>LI</a>
+                <a href="#"><i class="instagram"></i>IG</a>
+            </div>
+        </footer>
+    </main>
 </body>
 
 </html>
