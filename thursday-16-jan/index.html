@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="" id="register-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="is-cute">Is it cute?</label>
+        <input type="checkbox" id="is-cute">
+        <select name="" id="breed">
+            <option value="ragdoll">Ragdoll</option>
+            <option value="scottish-fold">Scottish Fold</option>
+            <option value="birma">Birma</option>
+        </select>
+        <div>
+            <p>Vaccinated:</p>
+            <label for="radio-yes">Yes:</label>
+            <input type="radio" name="radio-yes" id="radio-yes">
+            <label for="radio-no">No:</label>
+            <input type="radio" name="radio-no" id="radio-no">
+        </div>
+        <label for="date">Born:</label>
+        <input type="date" name="date" id="date">
+        <button type="submit">Add cat</button>
+      </form>
+    </main>
+  </body>
+</html>
