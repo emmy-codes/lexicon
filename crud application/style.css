@@ -1,0 +1,213 @@
+/* Modal Content taken from W3Schools */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* W3schools modal background template */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* MUD stuff */
+
+body {
+    background-color: black;
+}
+
+.header1 {
+    text-align: center;
+    color: orangered;
+    font-family: 'Luminari';
+    font-size: 50px;
+    margin: 10px;
+}
+
+.header2 {
+    text-align: center;
+    color: orange;
+    font-family: 'Luminari';
+    font-size: 30px;
+    margin: 10px;
+}
+
+.textp {
+    color: white;
+    padding: 1%;
+}
+
+.topbox {
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    padding: 10px;
+    margin: 5px;
+    min-height: 400px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+.outerbox {
+    width: auto;
+    height: auto;
+    border: 5px solid white;
+    display: flex;
+    margin: auto;
+}
+
+.rightbox {
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    padding: 20px;
+    margin: 5px;
+    height: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+.leftbox {
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    padding: 20px;
+    margin: 5px;
+    height: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+.inventory-controls {
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    padding: 10px;
+    margin: 0px;
+    height: auto;
+}
+
+.bottombox {
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    padding: 5px;
+    margin: 5px;
+    height: 50px;
+    width: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centreboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.torches {
+    display: flex;
+    z-index: -1;
+    padding: 10px;
+}
+
+.gamebox {
+    display: flex;
+}
+
+.green {
+    color: forestgreen;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.button {
+    background-color: orangered;
+    text-align: center;
+    border-radius: 10px;
+    height: 10%;
+    width: 20%;
+    padding: 2%;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.controlstext {
+    color: white;
+    padding-inline-start: 20px;
+}
+
+.controlstext li {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+/* media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .outerbox {
+        flex-direction: column;
+    }
+    .torches {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbox {
+        font-size: medium;
+    }
+}

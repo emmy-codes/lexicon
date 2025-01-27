@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Sheet</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <div class="gamebox">
+            <!-- <div class="torches">
+                    <img src="/images/torch.gif" />
+                </div> -->
+            <div class="outerbox">
+                <div class="leftbox">
+                    <div class="inventory-controls">
+                        <h3 class="header2">Controls</h3>
+                    </div>
+                    <ul class="controlstext">
+                        <li>
+                            <span class="green">Go</span> - Moves your character one square.
+                        </li>
+                        <li>
+                            <span class="orange">Look</span> - Take a closer look at an item.
+                        </li>
+                        <li><span class="yellow">Get</span> - Pick up an item.</li>
+                        <li><span class="red">Use</span> - Use an item.</li>
+                    </ul>
+                </div>
+
+                <div class="centreboxes">
+                    <div class="topbox">
+                        <div class="main-content-wrapper">
+                            <section class="character-sheet">
+                                <div class="name">
+                                    <input type="text" placeholder="Character name">
+                                    <button class="add-character-name">Save</button>
+                                </div>
+                                <!-- map over the json data -->
+                            </section>                            
+                            <h2 class="points">Points available: ${character.available-points} / ${character.total-points}</h2>
+
+                            <section id="stats-info">
+
+                            </section>
+
+                        </div>
+                    </div>
+                    <div class="bottombox"></div>
+                </div>
+
+                <div class="rightbox">
+                    <div class="inventory-controls">
+                        <h3 class="header2">Inventory</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="torches">
+                    <img src="/images/torch.gif" />
+                </div> -->
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
