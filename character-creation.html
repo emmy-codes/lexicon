@@ -41,13 +41,54 @@
                                     <button class="add-character-name">Save</button>
                                 </div>
                                 <!-- map over the json data -->
-                            </section>                            
-                            <h2 class="points">Points available: ${character.available-points} / ${character.total-points}</h2>
+                            </section>
+                            <h2 class="points">Points available: ${character.available-points} /
+                                ${character.total-points}</h2>
 
                             <section id="stats-info">
-
+                                <article class="STR">
+                                    <h2>STR</h2>
+                                    <input type="number">
+                                    <button id="str-info" data-url="/api/ability-scores/str">Read up on this
+                                        stat</button>
+                                </article>
+                                <article class="DEX">
+                                    <h2>DEX</h2>
+                                    <input type="number">
+                                    <button id="dex-info" data-url="/api/ability-scores/dex">
+                                        Read up on this stat
+                                    </button>
+                                </article>
+                                <article class="CON">
+                                    <h2>CON</h2>
+                                    <input type="number">
+                                    <button id="con-info" data-url="/api/ability-scores/con">
+                                        Read up on this stat
+                                    </button>
+                                </article>
+                                <article class="INT">
+                                    <h2>INT</h2>
+                                    <input type="number">
+                                    <button id="int-info" data-url="/api/ability-scores/int">
+                                        Read up on this stat
+                                    </button>
+                                </article>
+                                <article class="WIS">
+                                    <h2>WIS</h2>
+                                    <input type="number">
+                                    <button id="wis-info" data-url="/api/ability-scores/wis">
+                                        Read up on this stat
+                                    </button>
+                                </article>
+                                <article class="CHA">
+                                    <h2>CHA</h2>
+                                    <input type="number">
+                                    <button id="cha-info" data-url="/api/ability-scores/cha">
+                                        Read up on this stat
+                                    </button>
+                                </article>
                             </section>
-
+                            <button class="save-character">Save</button>
                         </div>
                     </div>
                     <div class="bottombox"></div>
