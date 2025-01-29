@@ -15,8 +15,8 @@
             <!-- <div class="torches">
                     <img src="/images/torch.gif" />
                 </div> -->
-            <div class="outerbox">
-                <div class="leftbox">
+            <article class="outerbox">
+                <article class="leftbox">
                     <div class="inventory-controls">
                         <h3 class="header2">Controls</h3>
                     </div>
@@ -30,85 +30,89 @@
                         <li><span class="yellow">Get</span> - Pick up an item.</li>
                         <li><span class="red">Use</span> - Use an item.</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="centreboxes">
-                    <div class="topbox">
-                        <div class="main-content-wrapper">
+                <article class="centreboxes">
+                    <article class="topbox">
+                        <section class="main-content-wrapper">
                             <section class="character-sheet">
                                 <div class="name">
                                     <input type="text" placeholder="Character name">
                                     <button class="add-character-name">Save</button>
                                 </div>
-                                <!-- map over the json data -->
-                            </section>
-                            <h2 class="points">Points available: ${character.available-points} /
-                                ${character.total-points}</h2>
+                                <h2 class="points">Points available: ${character.available-points} /
+                                    ${character.total-points}</h2>
 
-                            <section id="stats-info">
-                                <article class="STR">
-                                    <h2>STR</h2>
-                                    <input type="number">
-                                    <button id="str-info" data-url="/api/ability-scores/str">Read up on this
-                                        stat</button>
-                                </article>
-                                <article class="DEX">
-                                    <h2>DEX</h2>
-                                    <input type="number">
-                                    <button id="dex-info" data-url="/api/ability-scores/dex">
-                                        Read up on this stat
-                                    </button>
-                                </article>
-                                <article class="CON">
-                                    <h2>CON</h2>
-                                    <input type="number">
-                                    <button id="con-info" data-url="/api/ability-scores/con">
-                                        Read up on this stat
-                                    </button>
-                                </article>
-                                <article class="INT">
-                                    <h2>INT</h2>
-                                    <input type="number">
-                                    <button id="int-info" data-url="/api/ability-scores/int">
-                                        Read up on this stat
-                                    </button>
-                                </article>
-                                <article class="WIS">
-                                    <h2>WIS</h2>
-                                    <input type="number">
-                                    <button id="wis-info" data-url="/api/ability-scores/wis">
-                                        Read up on this stat
-                                    </button>
-                                </article>
-                                <article class="CHA">
-                                    <h2>CHA</h2>
-                                    <input type="number">
-                                    <button id="cha-info" data-url="/api/ability-scores/cha">
-                                        Read up on this stat
-                                    </button>
+                                <section id="stats-info">
+                                    <article class="STR">
+                                        <h2>STR</h2>
+                                        <input type="number">
+                                        <button id="str-info" data-url="/api/ability-scores/str">Read up on this
+                                            stat</button>
+                                    </article>
+                                    <article class="DEX">
+                                        <h2>DEX</h2>
+                                        <input type="number">
+                                        <button id="dex-info" data-url="/api/ability-scores/dex">
+                                            Read up on this stat
+                                        </button>
+                                    </article>
+                                    <article class="CON">
+                                        <h2>CON</h2>
+                                        <input type="number">
+                                        <button id="con-info" data-url="/api/ability-scores/con">
+                                            Read up on this stat
+                                        </button>
+                                    </article>
+                                    <article class="INT">
+                                        <h2>INT</h2>
+                                        <input type="number">
+                                        <button id="int-info" data-url="/api/ability-scores/int">
+                                            Read up on this stat
+                                        </button>
+                                    </article>
+                                    <article class="WIS">
+                                        <h2>WIS</h2>
+                                        <input type="number">
+                                        <button id="wis-info" data-url="/api/ability-scores/wis">
+                                            Read up on this stat
+                                        </button>
+                                    </article>
+                                    <article class="CHA">
+                                        <h2>CHA</h2>
+                                        <input type="number">
+                                        <button id="cha-info" data-url="/api/ability-scores/cha">
+                                            Read up on this stat
+                                        </button>
+                                    </article>
+                                </section>
+                            </section>
+                            <!-- modal data -->
+                            <section class="modal">
+                                <article class="modal-content">
+                                    <span class="close">X</span>
+                                    <p>Modal content here</p>
+                                    <button class="modal-close">Close</button>
                                 </article>
                             </section>
                             <button class="save-character">Save</button>
-                        </div>
-                    </div>
-                    <div class="bottombox"></div>
-                </div>
+                        </section>
+                    </article>
+                    <article class="bottombox"></article>
+                </article>
 
-                <div class="rightbox">
-                    <div class="inventory-controls">
+                <section class="rightbox">
+                    <article class="inventory-controls">
                         <h3 class="header2">Inventory</h3>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </article>
             <!-- <div class="torches">
                     <img src="/images/torch.gif" />
                 </div> -->
         </div>
 
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>
