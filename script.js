@@ -1,30 +1,6 @@
-
-// fetch API data
-// const fetchStatDetails = async () => {
-//     try {
-//         const response = await fetch(ABILITY_SCORES_URL);
-//         if (!response.ok) {
-//             throw new Error("Epic fail");
-//         }
-//         const data = await response.json();
-//         // adds count to track nr of each stat the user has picked
-//         data.results.forEach(stat => {
-//             stat.count = 0;
-//         });
-
-//         // console.log(data.results)
-//         // save in localstorage
-//         localStorage.setItem("character_data", JSON.stringify(data));
-//         return data;
-//     } catch (error) {
-//         console.error(error);
-//     }
-// };
-// 
-
-
-
 // new API call to use for "read more about this stat" https://www.dnd5eapi.co/api/ability-scores/${url}
+const statTitle = document.getElementById("stat-title");
+const statDescription = document.getElementById("stat-description");
 
 const fetchStatDetails = async (url) => {
     try {
@@ -38,7 +14,8 @@ const fetchStatDetails = async (url) => {
         // });
         // save in localstorage
         localStorage.setItem("character_data", JSON.stringify(data));
-        console.log("Button click:", data.desc);
+        statTitle.textContent = data.full_name;
+        statDescription.textContent = data.desc;
         return data;
     } catch (error) {
         console.error(error);
@@ -47,12 +24,20 @@ const fetchStatDetails = async (url) => {
 
 // event listener for buttons to fetch description from api
 const statsContainer = document.getElementById("stats-info");
+const targetModal = document.getElementById("modal");
 statsContainer.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
+        targetModal.style.display = "block";
         const url = e.target.dataset.url; // dataset is the data-url tag on the HTML elements
-        fetchStatDetails(`https://www.dnd5eapi.co${url}`)
+        fetchStatDetails(`https://www.dnd5eapi.co${url}`);
     }
 });
+
+// close modal
+const closeModal = document.querySelector(".modal-close");
+closeModal.addEventListener("click", () => {
+    targetModal.style.display = "none";
+})
 
 // check if data stored in local storage
 const checkCurrentData = async () => {
@@ -67,20 +52,16 @@ const checkCurrentData = async () => {
     }
 };
 
-
-
-
-
 // save character data
 const saveCharacter = () => {
     // collect stat name and value
     // store data in obj or array
-}
+};
 
 // render any data found in localstorage
 
 const renderCharacterData = (character) => {
-    // currently targetting the ability scores rather than `https://www.dnd5eapi.co${url}`because of my first fetch fn
+    // when i have multiple characters, for later
     console.log("character data: ", character)
 };
 

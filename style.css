@@ -23,7 +23,7 @@
 }
 
 /* W3schools modal background template */
-.modal {
+.modal-wrapper {
     display: none;
     position: fixed;
     z-index: 1;
