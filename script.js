@@ -1,6 +1,13 @@
-// new API call to use for "read more about this stat" https://www.dnd5eapi.co/api/ability-scores/${url}
 const statTitle = document.getElementById("stat-title");
 const statDescription = document.getElementById("stat-description");
+const statsContainer = document.getElementById("stats-info");
+const targetModal = document.getElementById("modal");
+const closeModal = document.querySelector(".modal-close");
+const showSpentPoints = document.getElementById("spent-points");
+const showMaxPoints = document.getElementById("max-points");
+const totalPoints = 20;
+let currentPointDistribution = 0;
+const targetStatsInputFields = document.querySelectorAll("#stats-info input");
 
 const fetchStatDetails = async (url) => {
     try {
@@ -14,6 +21,7 @@ const fetchStatDetails = async (url) => {
         // });
         // save in localstorage
         localStorage.setItem("character_data", JSON.stringify(data));
+        console.log(data)
         statTitle.textContent = data.full_name;
         statDescription.textContent = data.desc;
         return data;
@@ -23,8 +31,6 @@ const fetchStatDetails = async (url) => {
 };
 
 // event listener for buttons to fetch description from api
-const statsContainer = document.getElementById("stats-info");
-const targetModal = document.getElementById("modal");
 statsContainer.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
         targetModal.style.display = "block";
@@ -34,10 +40,9 @@ statsContainer.addEventListener("click", (e) => {
 });
 
 // close modal
-const closeModal = document.querySelector(".modal-close");
 closeModal.addEventListener("click", () => {
     targetModal.style.display = "none";
-})
+});
 
 // check if data stored in local storage
 const checkCurrentData = async () => {
@@ -48,9 +53,25 @@ const checkCurrentData = async () => {
     } else {
         console.log("No characters yet");
         const data = await fetchStatDetails();
-        console.log(data);
     }
 };
+
+const updateAvailablePoints = (event) => {
+    const { value } = event.target;
+    // track spent points
+    // TIL that using radix (here as 10) is a good practice to avoid the number input being incorrectly interpreted which can lead to errors
+    currentPointDistribution += parseInt(value, 10);
+    // update available points
+    // currentPointDistribution = totalPoints - currentPointDistribution;
+    
+    showSpentPoints.textContent = `${currentPointDistribution}`;
+    showMaxPoints.textContent = `/ ${totalPoints} points`;
+};
+
+// event listener for onchange of input fields to update the available stats
+targetStatsInputFields.forEach(stat => {
+    stat.addEventListener("change", updateAvailablePoints);
+});
 
 // save character data
 const saveCharacter = () => {
@@ -59,12 +80,9 @@ const saveCharacter = () => {
 };
 
 // render any data found in localstorage
-
 const renderCharacterData = (character) => {
     // when i have multiple characters, for later
     console.log("character data: ", character)
 };
 
-
-// fetchStatDetails();
 checkCurrentData();
