@@ -46,14 +46,26 @@ closeModal.addEventListener("click", () => {
 
 // check if data stored in local storage
 const checkCurrentData = async () => {
-    const character_data = JSON.parse(localStorage.getItem("character_data"));
-    if (character_data) {
-        console.log("There are characters saved");
-        renderCharacterData(character_data);
-    } else {
-        console.log("No characters yet");
-        const data = await fetchStatDetails();
+    try {
+        const character_data = JSON.parse(localStorage.getItem("character_data"));
+        if (character_data) {
+            console.log("There are characters saved");
+            renderCharacterData(character_data);
+        } else {
+            console.log("No characters yet");
+            const nameInput = document.querySelector("#character-name");
+            const statInputs = document.querySelectorAll("#stats-info input");
+
+            // initialise input fields as empty/0
+            nameInput.value = "";
+            statInputs.forEach(stat => {
+                stat.value = 0;
+            });
+        }
+    } catch (error) {
+        console.error("Error fetching character data :( ", error);
     }
+    
 };
 
 const updateAvailablePoints = (event) => {
@@ -77,6 +89,21 @@ targetStatsInputFields.forEach(stat => {
 const saveCharacter = () => {
     // collect stat name and value
     // store data in obj or array
+
+    const nameInput = document.querySelector("#character-name input");
+    const statInputs = document.querySelectorAll("#stats-info input");
+
+    // collect stat values
+    const stats = {};
+    statInputs.forEach(stat => {
+        stats[stat.parentElement.classList.toLowerCase()] = parseInt(stat.value, 10)
+    })
+    const characterData = {
+        name: nameInput.value,
+        stats: stats
+    };
+    // save to local storage
+    localStorage.setItem("character_data", JSON.stringify(characterData));
 };
 
 // render any data found in localstorage
