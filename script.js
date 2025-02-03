@@ -8,6 +8,8 @@ const showMaxPoints = document.getElementById("max-points");
 const totalPoints = 20;
 let currentPointDistribution = 0;
 const targetStatsInputFields = document.querySelectorAll("#stats-info input");
+const nameInput = document.querySelector("#character-name");
+const statInputs = document.querySelectorAll("#stats-info input");
 
 const fetchStatDetails = async (url) => {
     try {
@@ -16,9 +18,6 @@ const fetchStatDetails = async (url) => {
             throw new Error("Failed to fetch stat description");
         }
         const data = await response.json();
-        // data.results.forEach(stat => {
-        //     stat.count = 0;
-        // });
         // save in localstorage
         localStorage.setItem("character_data", JSON.stringify(data));
         console.log(data)
@@ -53,8 +52,6 @@ const checkCurrentData = async () => {
             renderCharacterData(character_data);
         } else {
             console.log("No characters yet");
-            const nameInput = document.querySelector("#character-name");
-            const statInputs = document.querySelectorAll("#stats-info input");
 
             // initialise input fields as empty/0
             nameInput.value = "";
@@ -65,17 +62,18 @@ const checkCurrentData = async () => {
     } catch (error) {
         console.error("Error fetching character data :( ", error);
     }
-    
+
 };
 
 const updateAvailablePoints = (event) => {
+    // myserious unexplained "use destructuring" from fiance
     const { value } = event.target;
     // track spent points
     // TIL that using radix (here as 10) is a good practice to avoid the number input being incorrectly interpreted which can lead to errors
     currentPointDistribution += parseInt(value, 10);
     // update available points
     // currentPointDistribution = totalPoints - currentPointDistribution;
-    
+
     showSpentPoints.textContent = `${currentPointDistribution}`;
     showMaxPoints.textContent = `/ ${totalPoints} points`;
 };
@@ -89,14 +87,10 @@ targetStatsInputFields.forEach(stat => {
 const saveCharacter = () => {
     // collect stat name and value
     // store data in obj or array
-
-    const nameInput = document.querySelector("#character-name input");
-    const statInputs = document.querySelectorAll("#stats-info input");
-
     // collect stat values
     const stats = {};
     statInputs.forEach(stat => {
-        stats[stat.parentElement.classList.toLowerCase()] = parseInt(stat.value, 10)
+        stats[stat.parentElement.classList] = parseInt(stat.value, 10)
     })
     const characterData = {
         name: nameInput.value,
@@ -106,10 +100,17 @@ const saveCharacter = () => {
     localStorage.setItem("character_data", JSON.stringify(characterData));
 };
 
+// event listener to save character data
+const saveButton = document.querySelector(".save-character");
+saveButton.addEventListener("click", saveCharacter);
+
 // render any data found in localstorage
-const renderCharacterData = (character) => {
-    // when i have multiple characters, for later
-    console.log("character data: ", character)
+const renderCharacterData = (characterData) => {
+    // append each input field to the DOM
+    nameInput.textContent = characterData.name;
+    for (const stat in characterData.stats) {
+    document.getElementById(`${stat}-value`).value = characterData.stats[stat];    
+};
 };
 
 checkCurrentData();

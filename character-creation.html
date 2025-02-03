@@ -37,8 +37,7 @@
                         <section class="main-content-wrapper">
                             <section class="character-sheet">
                                 <div class="name">
-                                    <input type="text" id="character-name">
-                                    <button class="add-character-name">Save</button>
+                                    <input type="text" id="character-name" required>
                                 </div>
                                 <h2>Current Point Distribution:</h2>
                                 <article class="points">
@@ -49,41 +48,41 @@
                                 <section id="stats-info">
                                     <article class="STR">
                                         <h2>STR</h2>
-                                        <input type="number" min="0">
+                                        <input id="str-value" type="number" min="0">
                                         <button class="modal-target" id="str-info" data-url="/api/ability-scores/str">Read up on this
                                             stat</button>
                                     </article>
                                     <article class="DEX">
                                         <h2>DEX</h2>
-                                        <input type="number" min="0">
+                                        <input id="dex-value" type="number" min="0">
                                         <button class="modal-target" id="dex-info" data-url="/api/ability-scores/dex">
                                             Read up on this stat
                                         </button>
                                     </article>
                                     <article class="CON">
                                         <h2>CON</h2>
-                                        <input type="number" min="0">
+                                        <input id="con-value" type="number" min="0">
                                         <button class="modal-target" id="con-info" data-url="/api/ability-scores/con">
                                             Read up on this stat
                                         </button>
                                     </article>
                                     <article class="INT">
                                         <h2>INT</h2>
-                                        <input type="number" min="0">
+                                        <input id="int-value" type="number" min="0">
                                         <button class="modal-target" id="int-info" data-url="/api/ability-scores/int">
                                             Read up on this stat
                                         </button>
                                     </article>
                                     <article class="WIS">
                                         <h2>WIS</h2>
-                                        <input type="number" min="0">
+                                        <input id="wis-value" type="number" min="0">
                                         <button class="modal-target" id="wis-info" data-url="/api/ability-scores/wis">
                                             Read up on this stat
                                         </button>
                                     </article>
                                     <article class="CHA">
                                         <h2>CHA</h2>
-                                        <input type="number" min="0">
+                                        <input id="cha-value" type="number" min="0">
                                         <button class="modal-target" id="cha-info" data-url="/api/ability-scores/cha">
                                             Read up on this stat
                                         </button>
